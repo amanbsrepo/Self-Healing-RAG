@@ -1,0 +1,1102 @@
+{
+  "questions": [
+    {
+      "id": "in_scope_001",
+      "scope": "in_scope",
+      "question": "Which framework controls the RAG workflow?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "LangGraph StateGraph"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_002",
+      "scope": "in_scope",
+      "question": "Which nodes are included in the StateGraph?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "retrieve, generate, critique, final, and fallback"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_003",
+      "scope": "in_scope",
+      "question": "How does the conditional edge create a cycle?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "unsupported answer back to retrieval"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_004",
+      "scope": "in_scope",
+      "question": "What information is stored in the typed RAG state?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "original question, current search query, retrieved chunks"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_005",
+      "scope": "in_scope",
+      "question": "What does the critique node check?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "factual claims against the retrieved chunks"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_006",
+      "scope": "in_scope",
+      "question": "What happens after an answer has an unsupported claim?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "back to retrieval with a changed query"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_007",
+      "scope": "in_scope",
+      "question": "How many total generation attempts are allowed?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "generation attempts is three"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_008",
+      "scope": "in_scope",
+      "question": "What exact sentence is returned as the safe fallback?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "I don't have enough information."
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_009",
+      "scope": "in_scope",
+      "question": "Which vector database does the project use?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "FAISS is the vector database"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_010",
+      "scope": "in_scope",
+      "question": "Which FAISS index type is created?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "IndexFlatIP"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_011",
+      "scope": "in_scope",
+      "question": "Which default embedding model is used?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_012",
+      "scope": "in_scope",
+      "question": "Why are the embeddings normalized?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "inner product",
+        "cosine similarity"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_013",
+      "scope": "in_scope",
+      "question": "How is the FAISS index persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "faiss.write_index",
+        "data/faiss_index.bin"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_014",
+      "scope": "in_scope",
+      "question": "How is chunk metadata persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "JSON",
+        "data/chunks.json"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_015",
+      "scope": "in_scope",
+      "question": "Does the project use pickle for chunk metadata?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "does not use pickle"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_016",
+      "scope": "in_scope",
+      "question": "What information is included with every chunk?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "unique ID, source name, page number, and text"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_017",
+      "scope": "in_scope",
+      "question": "What information is included in each citation?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "chunk ID, source filename, page, text, and similarity score"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_018",
+      "scope": "in_scope",
+      "question": "How is per-claim grounding performed?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "supported",
+        "supporting chunks"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_019",
+      "scope": "in_scope",
+      "question": "Which file controls runtime configuration?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "self_healing_rag/config.py"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_020",
+      "scope": "in_scope",
+      "question": "What does the stub provider require?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "requires no API key"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_021",
+      "scope": "in_scope",
+      "question": "Does the application require users to upload documents?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "does not require the user to upload any documents"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_022",
+      "scope": "in_scope",
+      "question": "How is the command-line application started?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "python main.py"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_023",
+      "scope": "in_scope",
+      "question": "How is the Streamlit application started?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "streamlit run app.py"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_024",
+      "scope": "in_scope",
+      "question": "How is the test suite run?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "pytest"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_025",
+      "scope": "in_scope",
+      "question": "Which metrics are calculated by the evaluation script?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "claim-support rate",
+        "key-fact hit rate",
+        "out-of-scope refusal rate"
+      ],
+      "variant": "original"
+    },
+    {
+      "id": "in_scope_026",
+      "scope": "in_scope",
+      "question": "What framework orchestrates the RAG workflow?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "LangGraph StateGraph"
+      ],
+      "variant": "paraphrase_of_01"
+    },
+    {
+      "id": "in_scope_027",
+      "scope": "in_scope",
+      "question": "Which library is used to control the workflow?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "LangGraph StateGraph"
+      ],
+      "variant": "paraphrase_of_01"
+    },
+    {
+      "id": "in_scope_028",
+      "scope": "in_scope",
+      "question": "Which nodes does the StateGraph include?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "retrieve, generate, critique, final, and fallback"
+      ],
+      "variant": "paraphrase_of_02"
+    },
+    {
+      "id": "in_scope_029",
+      "scope": "in_scope",
+      "question": "What are the nodes in the RAG workflow graph?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "retrieve, generate, critique, final, and fallback"
+      ],
+      "variant": "paraphrase_of_02"
+    },
+    {
+      "id": "in_scope_030",
+      "scope": "in_scope",
+      "question": "How does the conditional edge make the workflow cycle?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "unsupported answer back to retrieval"
+      ],
+      "variant": "paraphrase_of_03"
+    },
+    {
+      "id": "in_scope_031",
+      "scope": "in_scope",
+      "question": "Why does the graph loop back to retrieval?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "unsupported answer back to retrieval"
+      ],
+      "variant": "paraphrase_of_03"
+    },
+    {
+      "id": "in_scope_032",
+      "scope": "in_scope",
+      "question": "What does the typed RAG state store?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "original question, current search query, retrieved chunks"
+      ],
+      "variant": "paraphrase_of_04"
+    },
+    {
+      "id": "in_scope_033",
+      "scope": "in_scope",
+      "question": "Which information does the RAG state keep?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "original question, current search query, retrieved chunks"
+      ],
+      "variant": "paraphrase_of_04"
+    },
+    {
+      "id": "in_scope_034",
+      "scope": "in_scope",
+      "question": "What does the critique node verify?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "factual claims against the retrieved chunks"
+      ],
+      "variant": "paraphrase_of_05"
+    },
+    {
+      "id": "in_scope_035",
+      "scope": "in_scope",
+      "question": "Which claims does the critique node check?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "factual claims against the retrieved chunks"
+      ],
+      "variant": "paraphrase_of_05"
+    },
+    {
+      "id": "in_scope_036",
+      "scope": "in_scope",
+      "question": "What does the workflow do after an unsupported claim?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "back to retrieval with a changed query"
+      ],
+      "variant": "paraphrase_of_06"
+    },
+    {
+      "id": "in_scope_037",
+      "scope": "in_scope",
+      "question": "What happens when an answer has an unsupported claim?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "back to retrieval with a changed query"
+      ],
+      "variant": "paraphrase_of_06"
+    },
+    {
+      "id": "in_scope_038",
+      "scope": "in_scope",
+      "question": "What is the maximum number of generation attempts?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "generation attempts is three"
+      ],
+      "variant": "paraphrase_of_07"
+    },
+    {
+      "id": "in_scope_039",
+      "scope": "in_scope",
+      "question": "How many generation attempts are allowed in total?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "generation attempts is three"
+      ],
+      "variant": "paraphrase_of_07"
+    },
+    {
+      "id": "in_scope_040",
+      "scope": "in_scope",
+      "question": "Which exact sentence is the safe fallback?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "I don't have enough information."
+      ],
+      "variant": "paraphrase_of_08"
+    },
+    {
+      "id": "in_scope_041",
+      "scope": "in_scope",
+      "question": "What sentence does the safe fallback return?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "I don't have enough information."
+      ],
+      "variant": "paraphrase_of_08"
+    },
+    {
+      "id": "in_scope_042",
+      "scope": "in_scope",
+      "question": "Which vector database is used by the project?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "FAISS is the vector database"
+      ],
+      "variant": "paraphrase_of_09"
+    },
+    {
+      "id": "in_scope_043",
+      "scope": "in_scope",
+      "question": "What is the vector database used by the project?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "FAISS is the vector database"
+      ],
+      "variant": "paraphrase_of_09"
+    },
+    {
+      "id": "in_scope_044",
+      "scope": "in_scope",
+      "question": "What FAISS index type is created?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "IndexFlatIP"
+      ],
+      "variant": "paraphrase_of_10"
+    },
+    {
+      "id": "in_scope_045",
+      "scope": "in_scope",
+      "question": "Which type of FAISS index does the project create?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "IndexFlatIP"
+      ],
+      "variant": "paraphrase_of_10"
+    },
+    {
+      "id": "in_scope_046",
+      "scope": "in_scope",
+      "question": "What is the default embedding model?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "variant": "paraphrase_of_11"
+    },
+    {
+      "id": "in_scope_047",
+      "scope": "in_scope",
+      "question": "Which embedding model is used by default?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "variant": "paraphrase_of_11"
+    },
+    {
+      "id": "in_scope_048",
+      "scope": "in_scope",
+      "question": "Why do the embeddings get normalized?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "inner product",
+        "cosine similarity"
+      ],
+      "variant": "paraphrase_of_12"
+    },
+    {
+      "id": "in_scope_049",
+      "scope": "in_scope",
+      "question": "Why are embeddings normalized?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "inner product",
+        "cosine similarity"
+      ],
+      "variant": "paraphrase_of_12"
+    },
+    {
+      "id": "in_scope_050",
+      "scope": "in_scope",
+      "question": "How does the project persist the FAISS index?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "faiss.write_index",
+        "data/faiss_index.bin"
+      ],
+      "variant": "paraphrase_of_13"
+    },
+    {
+      "id": "in_scope_051",
+      "scope": "in_scope",
+      "question": "Where is the FAISS index persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "faiss.write_index",
+        "data/faiss_index.bin"
+      ],
+      "variant": "paraphrase_of_13"
+    },
+    {
+      "id": "in_scope_052",
+      "scope": "in_scope",
+      "question": "How does the project persist chunk metadata?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "JSON",
+        "data/chunks.json"
+      ],
+      "variant": "paraphrase_of_14"
+    },
+    {
+      "id": "in_scope_053",
+      "scope": "in_scope",
+      "question": "Where is chunk metadata persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "JSON",
+        "data/chunks.json"
+      ],
+      "variant": "paraphrase_of_14"
+    },
+    {
+      "id": "in_scope_054",
+      "scope": "in_scope",
+      "question": "Is pickle used for chunk metadata?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "does not use pickle"
+      ],
+      "variant": "paraphrase_of_15"
+    },
+    {
+      "id": "in_scope_055",
+      "scope": "in_scope",
+      "question": "Does the project use pickle?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "does not use pickle"
+      ],
+      "variant": "paraphrase_of_15"
+    },
+    {
+      "id": "in_scope_056",
+      "scope": "in_scope",
+      "question": "What does every chunk include?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "unique ID, source name, page number, and text"
+      ],
+      "variant": "paraphrase_of_16"
+    },
+    {
+      "id": "in_scope_057",
+      "scope": "in_scope",
+      "question": "Which information is included with each chunk?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "unique ID, source name, page number, and text"
+      ],
+      "variant": "paraphrase_of_16"
+    },
+    {
+      "id": "in_scope_058",
+      "scope": "in_scope",
+      "question": "What does each citation include?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "chunk ID, source filename, page, text, and similarity score"
+      ],
+      "variant": "paraphrase_of_17"
+    },
+    {
+      "id": "in_scope_059",
+      "scope": "in_scope",
+      "question": "Which information is included in every citation?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "chunk ID, source filename, page, text, and similarity score"
+      ],
+      "variant": "paraphrase_of_17"
+    },
+    {
+      "id": "in_scope_060",
+      "scope": "in_scope",
+      "question": "How does per-claim grounding work?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "supported",
+        "supporting chunks"
+      ],
+      "variant": "paraphrase_of_18"
+    },
+    {
+      "id": "in_scope_061",
+      "scope": "in_scope",
+      "question": "How is per-claim grounding done?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "supported",
+        "supporting chunks"
+      ],
+      "variant": "paraphrase_of_18"
+    },
+    {
+      "id": "in_scope_062",
+      "scope": "in_scope",
+      "question": "Which file controls the runtime configuration?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "self_healing_rag/config.py"
+      ],
+      "variant": "paraphrase_of_19"
+    },
+    {
+      "id": "in_scope_063",
+      "scope": "in_scope",
+      "question": "Does the stub provider require an API key?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "requires no API key"
+      ],
+      "variant": "paraphrase_of_20"
+    },
+    {
+      "id": "in_scope_064",
+      "scope": "in_scope",
+      "question": "Must users upload documents for the application?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "does not require the user to upload any documents"
+      ],
+      "variant": "paraphrase_of_21"
+    },
+    {
+      "id": "in_scope_065",
+      "scope": "in_scope",
+      "question": "How do I start the command-line application?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "python main.py"
+      ],
+      "variant": "paraphrase_of_22"
+    },
+    {
+      "id": "in_scope_066",
+      "scope": "in_scope",
+      "question": "How do I start the Streamlit application?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "streamlit run app.py"
+      ],
+      "variant": "paraphrase_of_23"
+    },
+    {
+      "id": "in_scope_067",
+      "scope": "in_scope",
+      "question": "How do I run the test suite?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "pytest"
+      ],
+      "variant": "paraphrase_of_24"
+    },
+    {
+      "id": "in_scope_068",
+      "scope": "in_scope",
+      "question": "Which tool runs the test suite?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "pytest"
+      ],
+      "variant": "paraphrase_of_24"
+    },
+    {
+      "id": "in_scope_069",
+      "scope": "in_scope",
+      "question": "What metrics does the evaluation script calculate?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "claim-support rate",
+        "key-fact hit rate",
+        "out-of-scope refusal rate"
+      ],
+      "variant": "paraphrase_of_25"
+    },
+    {
+      "id": "in_scope_070",
+      "scope": "in_scope",
+      "question": "Which metrics does the evaluation script report?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "claim-support rate",
+        "key-fact hit rate",
+        "out-of-scope refusal rate"
+      ],
+      "variant": "paraphrase_of_25"
+    },
+    {
+      "id": "out_of_scope_001",
+      "scope": "out_of_scope",
+      "question": "What is the company's paid vacation policy?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_002",
+      "scope": "out_of_scope",
+      "question": "Who won the 2032 FIFA World Cup?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_003",
+      "scope": "out_of_scope",
+      "question": "What is the capital city of Mars?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_004",
+      "scope": "out_of_scope",
+      "question": "What medication was prescribed to patient Robert?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_005",
+      "scope": "out_of_scope",
+      "question": "What is the current stock price of Acme Corporation?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_006",
+      "scope": "out_of_scope",
+      "question": "What will the weather be in Paris tomorrow?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_007",
+      "scope": "out_of_scope",
+      "question": "What is the administrator password?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_008",
+      "scope": "out_of_scope",
+      "question": "Give me a recipe for lasagna.",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "original"
+    },
+    {
+      "id": "out_of_scope_009",
+      "scope": "out_of_scope",
+      "question": "What is the capital city of France?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_010",
+      "scope": "out_of_scope",
+      "question": "How many players are on a cricket team?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_011",
+      "scope": "out_of_scope",
+      "question": "What is the boiling point of water at sea level?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_012",
+      "scope": "out_of_scope",
+      "question": "Who wrote the play Hamlet?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_013",
+      "scope": "out_of_scope",
+      "question": "What is the population of Tokyo?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_014",
+      "scope": "out_of_scope",
+      "question": "Which planet is closest to the sun?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_015",
+      "scope": "out_of_scope",
+      "question": "How do I bake a chocolate cake?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_016",
+      "scope": "out_of_scope",
+      "question": "What is the price of a plane ticket to London?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_017",
+      "scope": "out_of_scope",
+      "question": "Who is the current president of Brazil?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_018",
+      "scope": "out_of_scope",
+      "question": "What is the exchange rate between dollars and euros today?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_019",
+      "scope": "out_of_scope",
+      "question": "How tall is Mount Everest?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_020",
+      "scope": "out_of_scope",
+      "question": "What are the symptoms of the common flu?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_021",
+      "scope": "out_of_scope",
+      "question": "Which team won the last cricket world cup?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_022",
+      "scope": "out_of_scope",
+      "question": "What is my bank account balance?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_023",
+      "scope": "out_of_scope",
+      "question": "Tell me the phone number of the nearest hospital.",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_024",
+      "scope": "out_of_scope",
+      "question": "What movie won the best picture award last year?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_025",
+      "scope": "out_of_scope",
+      "question": "How do I change a flat tire on a bicycle?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_026",
+      "scope": "out_of_scope",
+      "question": "What is the speed of light in a vacuum?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_027",
+      "scope": "out_of_scope",
+      "question": "Who painted the Mona Lisa?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_028",
+      "scope": "out_of_scope",
+      "question": "What is the salary of the chief executive officer?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_029",
+      "scope": "out_of_scope",
+      "question": "How many calories are in a banana?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    },
+    {
+      "id": "out_of_scope_030",
+      "scope": "out_of_scope",
+      "question": "What is the next public holiday in India?",
+      "expected_sources": [],
+      "key_facts": [],
+      "variant": "new"
+    }
+  ]
+}

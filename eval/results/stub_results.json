@@ -1,0 +1,2029 @@
+{
+  "mode": "stub",
+  "mode_label": "stub mode, heuristic critic",
+  "generated_at": "2026-10-30T07:23:34.402841+00:00",
+  "metrics": {
+    "single_pass": {
+      "claim_support_rate": 100.0,
+      "key_fact_hit_rate": 100.0,
+      "out_of_scope_refusal_rate": 100.0,
+      "fallback_rate": 24.24,
+      "average_attempts": 1.0,
+      "expected_source_hit_rate": 100.0
+    },
+    "self_healing": {
+      "claim_support_rate": 100.0,
+      "key_fact_hit_rate": 100.0,
+      "out_of_scope_refusal_rate": 100.0,
+      "fallback_rate": 24.24,
+      "average_attempts": 1.0,
+      "expected_source_hit_rate": 100.0
+    }
+  },
+  "records": [
+    {
+      "id": "in_scope_01",
+      "scope": "in_scope",
+      "question": "Which framework controls the RAG workflow?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "LangGraph StateGraph"
+      ],
+      "single_pass": {
+        "answer": "The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000] The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000] The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "85b0718333674d7ea84d038b02af6224"
+      }
+    },
+    {
+      "id": "in_scope_02",
+      "scope": "in_scope",
+      "question": "Which nodes are included in the StateGraph?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "retrieve, generate, critique, final, and fallback"
+      ],
+      "single_pass": {
+        "answer": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. [rag-architecture-md::page-001::chunk-000] The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000] The critique node checks the factual claims against the retrieved chunks. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The critique node checks the factual claims against the retrieved chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. [rag-architecture-md::page-001::chunk-000] The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000] The critique node checks the factual claims against the retrieved chunks. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The critique node checks the factual claims against the retrieved chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "9ebf1e1474fc466bac05a31b1e28e335"
+      }
+    },
+    {
+      "id": "in_scope_03",
+      "scope": "in_scope",
+      "question": "How does the conditional edge create a cycle?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "unsupported answer back to retrieval"
+      ],
+      "single_pass": {
+        "answer": "A conditional edge creates a cycle by sending an unsupported answer back to retrieval. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "A conditional edge creates a cycle by sending an unsupported answer back to retrieval.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "A conditional edge creates a cycle by sending an unsupported answer back to retrieval. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "A conditional edge creates a cycle by sending an unsupported answer back to retrieval.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "04aea8cfbd594dd29883a3c5593c99aa"
+      }
+    },
+    {
+      "id": "in_scope_04",
+      "scope": "in_scope",
+      "question": "What information is stored in the typed RAG state?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "original question, current search query, retrieved chunks"
+      ],
+      "single_pass": {
+        "answer": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000] The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000] The LangGraph StateGraph framework controls the RAG workflow. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The LangGraph StateGraph framework controls the RAG workflow.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "1d91b5f128c54ebda7e6732f85f2fe13"
+      }
+    },
+    {
+      "id": "in_scope_05",
+      "scope": "in_scope",
+      "question": "What does the critique node check?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "factual claims against the retrieved chunks"
+      ],
+      "single_pass": {
+        "answer": "The critique node checks the factual claims against the retrieved chunks. [rag-architecture-md::page-001::chunk-000] The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The critique node checks the factual claims against the retrieved chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The critique node checks the factual claims against the retrieved chunks. [rag-architecture-md::page-001::chunk-000] The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. [rag-architecture-md::page-001::chunk-000] The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. [rag-architecture-md::page-001::chunk-000]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-000",
+            "source": "rag_architecture.md",
+            "snippet": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it. The LangGraph StateGraph framework controls the RAG workflow. The StateGraph includes the nodes retrieve, generate, critique, final, and fallback. The typed RAG state stores the original question, current search query, retrieved chunks, the generated answer, and the critique result. The critique node checks the factual claims against the retrieved chunks. A conditional edge creates a cycle by sending an unsupported answer back to retrieval. After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The critique node checks the factual claims against the retrieved chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The StateGraph includes the nodes retrieve, generate, critique, final, and fallback.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          },
+          {
+            "text": "The self-healing RAG pipeline answers a question in several stages and checks its own answer before returning it.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-000"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "25730b5c6468496f92c8d54479d712be"
+      }
+    },
+    {
+      "id": "in_scope_06",
+      "scope": "in_scope",
+      "question": "What happens after an answer has an unsupported claim?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "back to retrieval with a changed query"
+      ],
+      "single_pass": {
+        "answer": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. [rag-architecture-md::page-001::chunk-001] The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. [rag-architecture-md::page-001::chunk-001] The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "4f9c86a25af14f79a77c541b34b99a4b"
+      }
+    },
+    {
+      "id": "in_scope_07",
+      "scope": "in_scope",
+      "question": "How many total generation attempts are allowed?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "generation attempts is three"
+      ],
+      "single_pass": {
+        "answer": "The maximum number of total generation attempts is three. [rag-architecture-md::page-001::chunk-001] The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. [rag-architecture-md::page-001::chunk-001] The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The maximum number of total generation attempts is three.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The maximum number of total generation attempts is three. [rag-architecture-md::page-001::chunk-001] The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. [rag-architecture-md::page-001::chunk-001] The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The maximum number of total generation attempts is three.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          },
+          {
+            "text": "The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "9d97a5323506464ea50a2a5a846241de"
+      }
+    },
+    {
+      "id": "in_scope_08",
+      "scope": "in_scope",
+      "question": "What exact sentence is returned as the safe fallback?",
+      "expected_sources": [
+        "rag_architecture.md"
+      ],
+      "key_facts": [
+        "I don't have enough information."
+      ],
+      "single_pass": {
+        "answer": "The safe fallback returns the exact sentence: I don't have enough information. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The safe fallback returns the exact sentence: I don't have enough information.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The safe fallback returns the exact sentence: I don't have enough information. [rag-architecture-md::page-001::chunk-001]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "rag-architecture-md::page-001::chunk-001",
+            "source": "rag_architecture.md",
+            "snippet": "After an answer has an unsupported claim, the workflow goes back to retrieval with a changed query. The maximum number of total generation attempts is three. The safe fallback returns the exact sentence: I don't have enough information. The self-healing RAG workflow decides to retry when the critique finds an unsupported claim and attempts remain. The retry strategy uses the original query first, then the critic's reformulated query, and doubles the retrieval depth on the third attempt."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The safe fallback returns the exact sentence: I don't have enough information.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "rag-architecture-md::page-001::chunk-001"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "c2e50283ce9c46e2b7ec8e356820ba96"
+      }
+    },
+    {
+      "id": "in_scope_09",
+      "scope": "in_scope",
+      "question": "Which vector database does the project use?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "FAISS is the vector database"
+      ],
+      "single_pass": {
+        "answer": "FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "e5afbca2c40a4a5a8b074e37d05ed57b"
+      }
+    },
+    {
+      "id": "in_scope_10",
+      "scope": "in_scope",
+      "question": "Which FAISS index type is created?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "IndexFlatIP"
+      ],
+      "single_pass": {
+        "answer": "The FAISS index type created is IndexFlatIP, an exact inner-product index. [vector-store-md::page-001::chunk-002] The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The FAISS index type created is IndexFlatIP, an exact inner-product index.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The FAISS index type created is IndexFlatIP, an exact inner-product index. [vector-store-md::page-001::chunk-002] The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The FAISS index type created is IndexFlatIP, an exact inner-product index.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "a818b48d326a479b827aec52f7fc2e78"
+      }
+    },
+    {
+      "id": "in_scope_11",
+      "scope": "in_scope",
+      "question": "Which default embedding model is used?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "single_pass": {
+        "answer": "The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The default embedding model used is sentence-transformers/all-MiniLM-L6-v2.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The default embedding model used is sentence-transformers/all-MiniLM-L6-v2.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "3d4807cdb1774ddfa2762b525dc469a3"
+      }
+    },
+    {
+      "id": "in_scope_12",
+      "scope": "in_scope",
+      "question": "Why are the embeddings normalized?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "inner product",
+        "cosine similarity"
+      ],
+      "single_pass": {
+        "answer": "The embeddings are normalized so that the inner product equals cosine similarity. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The embeddings are normalized so that the inner product equals cosine similarity.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The embeddings are normalized so that the inner product equals cosine similarity. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The embeddings are normalized so that the inner product equals cosine similarity.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "e17381e8ee67421bb77b87b5b4bd4c75"
+      }
+    },
+    {
+      "id": "in_scope_13",
+      "scope": "in_scope",
+      "question": "How is the FAISS index persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "faiss.write_index",
+        "data/faiss_index.bin"
+      ],
+      "single_pass": {
+        "answer": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002] The FAISS index type created is IndexFlatIP, an exact inner-product index. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index type created is IndexFlatIP, an exact inner-product index.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002] The FAISS index type created is IndexFlatIP, an exact inner-product index. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index type created is IndexFlatIP, an exact inner-product index.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "635f87e374974cfc9fc943b24a8ab79f"
+      }
+    },
+    {
+      "id": "in_scope_14",
+      "scope": "in_scope",
+      "question": "How is chunk metadata persisted?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "JSON",
+        "data/chunks.json"
+      ],
+      "single_pass": {
+        "answer": "Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002] The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002] The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The FAISS index is persisted with faiss.write_index to data/faiss_index.bin.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "f474559dfbf54d20b7904ed04c3f45af"
+      }
+    },
+    {
+      "id": "in_scope_15",
+      "scope": "in_scope",
+      "question": "Does the project use pickle for chunk metadata?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "does not use pickle"
+      ],
+      "single_pass": {
+        "answer": "The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002] Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002] Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] FAISS is the vector database used by the project. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "FAISS is the vector database used by the project.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "3d0a25a72a3249e58a2137d79e177e5f"
+      }
+    },
+    {
+      "id": "in_scope_16",
+      "scope": "in_scope",
+      "question": "What information is included with every chunk?",
+      "expected_sources": [
+        "vector_store.md"
+      ],
+      "key_facts": [
+        "unique ID, source name, page number, and text"
+      ],
+      "single_pass": {
+        "answer": "Every chunk includes a unique ID, source name, page number, and text. [vector-store-md::page-001::chunk-002] Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Every chunk includes a unique ID, source name, page number, and text.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "Every chunk includes a unique ID, source name, page number, and text. [vector-store-md::page-001::chunk-002] Chunk metadata is persisted as JSON in data/chunks.json. [vector-store-md::page-001::chunk-002] The project does not use pickle for chunk metadata. [vector-store-md::page-001::chunk-002]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "vector-store-md::page-001::chunk-002",
+            "source": "vector_store.md",
+            "snippet": "FAISS is the vector database used by the project. The FAISS index type created is IndexFlatIP, an exact inner-product index. The default embedding model used is sentence-transformers/all-MiniLM-L6-v2. The embeddings are normalized so that the inner product equals cosine similarity. The FAISS index is persisted with faiss.write_index to data/faiss_index.bin. Chunk metadata is persisted as JSON in data/chunks.json. The project does not use pickle for chunk metadata. Every chunk includes a unique ID, source name, page number, and text."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Every chunk includes a unique ID, source name, page number, and text.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "Chunk metadata is persisted as JSON in data/chunks.json.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          },
+          {
+            "text": "The project does not use pickle for chunk metadata.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "vector-store-md::page-001::chunk-002"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "d1d8b33db5ee4790a7625128e2f01cef"
+      }
+    },
+    {
+      "id": "in_scope_17",
+      "scope": "in_scope",
+      "question": "What information is included in each citation?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "chunk ID, source filename, page, text, and similarity score"
+      ],
+      "single_pass": {
+        "answer": "Each citation includes the chunk ID, source filename, page, text, and similarity score. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Each citation includes the chunk ID, source filename, page, text, and similarity score.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "Each citation includes the chunk ID, source filename, page, text, and similarity score. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Each citation includes the chunk ID, source filename, page, text, and similarity score.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "6751983952fc4b67a42a8c8a4ea8c803"
+      }
+    },
+    {
+      "id": "in_scope_18",
+      "scope": "in_scope",
+      "question": "How is per-claim grounding performed?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "supported",
+        "supporting chunks"
+      ],
+      "single_pass": {
+        "answer": "Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "8a4725133ac94b599c10bb23d2fd61d9"
+      }
+    },
+    {
+      "id": "in_scope_19",
+      "scope": "in_scope",
+      "question": "Which file controls runtime configuration?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "self_healing_rag/config.py"
+      ],
+      "single_pass": {
+        "answer": "The file self_healing_rag/config.py controls the runtime configuration. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The file self_healing_rag/config.py controls the runtime configuration.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The file self_healing_rag/config.py controls the runtime configuration. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The file self_healing_rag/config.py controls the runtime configuration.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "4a9a51d3fae248a9a12b331d1dce1435"
+      }
+    },
+    {
+      "id": "in_scope_20",
+      "scope": "in_scope",
+      "question": "What does the stub provider require?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "requires no API key"
+      ],
+      "single_pass": {
+        "answer": "The stub provider requires no API key. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The stub provider requires no API key.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The stub provider requires no API key. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The stub provider requires no API key.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "94afb7a79a194d24856938ed17583f7a"
+      }
+    },
+    {
+      "id": "in_scope_21",
+      "scope": "in_scope",
+      "question": "Does the application require users to upload documents?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "does not require the user to upload any documents"
+      ],
+      "single_pass": {
+        "answer": "The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004] The stub provider requires no API key. [operations-guide-md::page-001::chunk-004] The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The stub provider requires no API key.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004] The stub provider requires no API key. [operations-guide-md::page-001::chunk-004] The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The stub provider requires no API key.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "2553ffc674e346a48d4bc22704f55a32"
+      }
+    },
+    {
+      "id": "in_scope_22",
+      "scope": "in_scope",
+      "question": "How is the command-line application started?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "python main.py"
+      ],
+      "single_pass": {
+        "answer": "The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004] The Streamlit application is started with streamlit run app.py. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The Streamlit application is started with streamlit run app.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004] The Streamlit application is started with streamlit run app.py. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The Streamlit application is started with streamlit run app.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "c4db6920b45a4bd69e14d07483cb0a09"
+      }
+    },
+    {
+      "id": "in_scope_23",
+      "scope": "in_scope",
+      "question": "How is the Streamlit application started?",
+      "expected_sources": [
+        "operations_guide.md"
+      ],
+      "key_facts": [
+        "streamlit run app.py"
+      ],
+      "single_pass": {
+        "answer": "The Streamlit application is started with streamlit run app.py. [operations-guide-md::page-001::chunk-004] The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The Streamlit application is started with streamlit run app.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The Streamlit application is started with streamlit run app.py. [operations-guide-md::page-001::chunk-004] The command-line application is started with python main.py. [operations-guide-md::page-001::chunk-004] The application does not require the user to upload any documents. [operations-guide-md::page-001::chunk-004]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "operations-guide-md::page-001::chunk-004",
+            "source": "operations_guide.md",
+            "snippet": "The file self_healing_rag/config.py controls the runtime configuration. The stub provider requires no API key. The application does not require the user to upload any documents. The command-line application is started with python main.py. The Streamlit application is started with streamlit run app.py."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The Streamlit application is started with streamlit run app.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The command-line application is started with python main.py.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          },
+          {
+            "text": "The application does not require the user to upload any documents.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "operations-guide-md::page-001::chunk-004"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "08e808f71b38481da968d24b496f8f44"
+      }
+    },
+    {
+      "id": "in_scope_24",
+      "scope": "in_scope",
+      "question": "How is the test suite run?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "pytest"
+      ],
+      "single_pass": {
+        "answer": "The test suite is run with pytest. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The test suite is run with pytest.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The test suite is run with pytest. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The test suite is run with pytest.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "54aed8fa6d2b49d4ac7750815d31505d"
+      }
+    },
+    {
+      "id": "in_scope_25",
+      "scope": "in_scope",
+      "question": "Which metrics are calculated by the evaluation script?",
+      "expected_sources": [
+        "quality_and_evaluation.md"
+      ],
+      "key_facts": [
+        "claim-support rate",
+        "key-fact hit rate",
+        "out-of-scope refusal rate"
+      ],
+      "single_pass": {
+        "answer": "The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts. [quality-and-evaluation-md::page-001::chunk-003]",
+        "status": "grounded",
+        "attempts": 1,
+        "sources": [
+          {
+            "chunk_id": "quality-and-evaluation-md::page-001::chunk-003",
+            "source": "quality_and_evaluation.md",
+            "snippet": "Each citation includes the chunk ID, source filename, page, text, and similarity score. Per-claim grounding checks every claim and marks it as supported or unsupported with the supporting chunks. The test suite is run with pytest. The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts."
+          }
+        ],
+        "claims": [
+          {
+            "text": "The evaluation script calculates the claim-support rate, key-fact hit rate, expected-source hit rate, out-of-scope refusal rate, fallback rate, and average attempts.",
+            "supported": true,
+            "evidence_chunk_ids": [
+              "quality-and-evaluation-md::page-001::chunk-003"
+            ]
+          }
+        ],
+        "error": null,
+        "run_id": "ae1d63c468764e92afc55c459c9a703f"
+      }
+    },
+    {
+      "id": "out_of_scope_01",
+      "scope": "out_of_scope",
+      "question": "What is the company's paid vacation policy?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "086b179caf0349d9b010795caaadf6bf"
+      }
+    },
+    {
+      "id": "out_of_scope_02",
+      "scope": "out_of_scope",
+      "question": "Who won the 2032 FIFA World Cup?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "c2e6106d34a64c89bbc56ab62b67a732"
+      }
+    },
+    {
+      "id": "out_of_scope_03",
+      "scope": "out_of_scope",
+      "question": "What is the capital city of Mars?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "4a62ea4c5f324cda92fc64b32f9f6303"
+      }
+    },
+    {
+      "id": "out_of_scope_04",
+      "scope": "out_of_scope",
+      "question": "What medication was prescribed to patient Robert?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "60e9313c25bf42fbbb26ef08f0f9bcb5"
+      }
+    },
+    {
+      "id": "out_of_scope_05",
+      "scope": "out_of_scope",
+      "question": "What is the current stock price of Acme Corporation?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "d20e00352d914b2dba1e5af7ecf74816"
+      }
+    },
+    {
+      "id": "out_of_scope_06",
+      "scope": "out_of_scope",
+      "question": "What will the weather be in Paris tomorrow?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "300b9710b06044bca5ffbac076c5d7b8"
+      }
+    },
+    {
+      "id": "out_of_scope_07",
+      "scope": "out_of_scope",
+      "question": "What is the administrator password?",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "cca7c60074cb4776ba7a2c70e8aa9820"
+      }
+    },
+    {
+      "id": "out_of_scope_08",
+      "scope": "out_of_scope",
+      "question": "Give me a recipe for lasagna.",
+      "expected_sources": [],
+      "key_facts": [],
+      "single_pass": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null
+      },
+      "self_healing": {
+        "answer": "I don't have enough information.",
+        "status": "fallback",
+        "attempts": 1,
+        "sources": [],
+        "claims": [],
+        "error": null,
+        "run_id": "2ab66539ff98460dbf167e6a66dbad25"
+      }
+    }
+  ]
+}

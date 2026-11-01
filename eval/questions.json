@@ -1,0 +1,235 @@
+{
+  "questions": [
+    {
+      "id": "in_scope_01",
+      "scope": "in_scope",
+      "question": "Which framework controls the RAG workflow?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["LangGraph StateGraph"]
+    },
+    {
+      "id": "in_scope_02",
+      "scope": "in_scope",
+      "question": "Which nodes are included in the StateGraph?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["retrieve, generate, critique, final, and fallback"]
+    },
+    {
+      "id": "in_scope_03",
+      "scope": "in_scope",
+      "question": "How does the conditional edge create a cycle?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["unsupported answer back to retrieval"]
+    },
+    {
+      "id": "in_scope_04",
+      "scope": "in_scope",
+      "question": "What information is stored in the typed RAG state?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["original question, current search query, retrieved chunks"]
+    },
+    {
+      "id": "in_scope_05",
+      "scope": "in_scope",
+      "question": "What does the critique node check?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["factual claims against the retrieved chunks"]
+    },
+    {
+      "id": "in_scope_06",
+      "scope": "in_scope",
+      "question": "What happens after an answer has an unsupported claim?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["back to retrieval with a changed query"]
+    },
+    {
+      "id": "in_scope_07",
+      "scope": "in_scope",
+      "question": "How many total generation attempts are allowed?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["generation attempts is three"]
+    },
+    {
+      "id": "in_scope_08",
+      "scope": "in_scope",
+      "question": "What exact sentence is returned as the safe fallback?",
+      "expected_sources": ["rag_architecture.md"],
+      "key_facts": ["I don't have enough information."]
+    },
+    {
+      "id": "in_scope_09",
+      "scope": "in_scope",
+      "question": "Which vector database does the project use?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["FAISS is the vector database"]
+    },
+    {
+      "id": "in_scope_10",
+      "scope": "in_scope",
+      "question": "Which FAISS index type is created?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["IndexFlatIP"]
+    },
+    {
+      "id": "in_scope_11",
+      "scope": "in_scope",
+      "question": "Which default embedding model is used?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["sentence-transformers/all-MiniLM-L6-v2"]
+    },
+    {
+      "id": "in_scope_12",
+      "scope": "in_scope",
+      "question": "Why are the embeddings normalized?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["inner product", "cosine similarity"]
+    },
+    {
+      "id": "in_scope_13",
+      "scope": "in_scope",
+      "question": "How is the FAISS index persisted?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["faiss.write_index", "data/faiss_index.bin"]
+    },
+    {
+      "id": "in_scope_14",
+      "scope": "in_scope",
+      "question": "How is chunk metadata persisted?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["JSON", "data/chunks.json"]
+    },
+    {
+      "id": "in_scope_15",
+      "scope": "in_scope",
+      "question": "Does the project use pickle for chunk metadata?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["does not use pickle"]
+    },
+    {
+      "id": "in_scope_16",
+      "scope": "in_scope",
+      "question": "What information is included with every chunk?",
+      "expected_sources": ["vector_store.md"],
+      "key_facts": ["unique ID, source name, page number, and text"]
+    },
+    {
+      "id": "in_scope_17",
+      "scope": "in_scope",
+      "question": "What information is included in each citation?",
+      "expected_sources": ["quality_and_evaluation.md"],
+      "key_facts": ["chunk ID, source filename, page, text, and similarity score"]
+    },
+    {
+      "id": "in_scope_18",
+      "scope": "in_scope",
+      "question": "How is per-claim grounding performed?",
+      "expected_sources": ["quality_and_evaluation.md"],
+      "key_facts": ["supported", "supporting chunks"]
+    },
+    {
+      "id": "in_scope_19",
+      "scope": "in_scope",
+      "question": "Which file controls runtime configuration?",
+      "expected_sources": ["operations_guide.md"],
+      "key_facts": ["self_healing_rag/config.py"]
+    },
+    {
+      "id": "in_scope_20",
+      "scope": "in_scope",
+      "question": "What does the stub provider require?",
+      "expected_sources": ["operations_guide.md"],
+      "key_facts": ["requires no API key"]
+    },
+    {
+      "id": "in_scope_21",
+      "scope": "in_scope",
+      "question": "Does the application require users to upload documents?",
+      "expected_sources": ["operations_guide.md"],
+      "key_facts": ["does not require the user to upload any documents"]
+    },
+    {
+      "id": "in_scope_22",
+      "scope": "in_scope",
+      "question": "How is the command-line application started?",
+      "expected_sources": ["operations_guide.md"],
+      "key_facts": ["python main.py"]
+    },
+    {
+      "id": "in_scope_23",
+      "scope": "in_scope",
+      "question": "How is the Streamlit application started?",
+      "expected_sources": ["operations_guide.md"],
+      "key_facts": ["streamlit run app.py"]
+    },
+    {
+      "id": "in_scope_24",
+      "scope": "in_scope",
+      "question": "How is the test suite run?",
+      "expected_sources": ["quality_and_evaluation.md"],
+      "key_facts": ["pytest"]
+    },
+    {
+      "id": "in_scope_25",
+      "scope": "in_scope",
+      "question": "Which metrics are calculated by the evaluation script?",
+      "expected_sources": ["quality_and_evaluation.md"],
+      "key_facts": ["claim-support rate", "key-fact hit rate", "out-of-scope refusal rate"]
+    },
+    {
+      "id": "out_of_scope_01",
+      "scope": "out_of_scope",
+      "question": "What is the company's paid vacation policy?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_02",
+      "scope": "out_of_scope",
+      "question": "Who won the 2032 FIFA World Cup?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_03",
+      "scope": "out_of_scope",
+      "question": "What is the capital city of Mars?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_04",
+      "scope": "out_of_scope",
+      "question": "What medication was prescribed to patient Robert?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_05",
+      "scope": "out_of_scope",
+      "question": "What is the current stock price of Acme Corporation?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_06",
+      "scope": "out_of_scope",
+      "question": "What will the weather be in Paris tomorrow?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_07",
+      "scope": "out_of_scope",
+      "question": "What is the administrator password?",
+      "expected_sources": [],
+      "key_facts": []
+    },
+    {
+      "id": "out_of_scope_08",
+      "scope": "out_of_scope",
+      "question": "Give me a recipe for lasagna.",
+      "expected_sources": [],
+      "key_facts": []
+    }
+  ]
+}
