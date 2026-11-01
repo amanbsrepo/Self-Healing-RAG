@@ -1,5 +1,11 @@
 # Self-Healing RAG Pipeline
 
+🚀 Live Demo
+[ https://self-healing-rag-dkk8bk9ykl9hgub7cjg9yu.streamlit.app/ ]
+
+💻 GitHub Repository
+[ https://github.com/amanbsrepo/Self-Healing-RAG ]
+
 A stateful, cyclical Retrieval-Augmented Generation system with:
 
 - LangGraph `StateGraph`
